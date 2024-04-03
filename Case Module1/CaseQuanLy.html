@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Laptop TCG</title>
+
+</head>
+<style>
+    img {
+        width: 100px;
+        height: 100px;
+    }
+
+    div {
+        background: lightgrey;
+    }
+
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 100%; /* Could be more or less, depending on screen size */
+    }
+
+    /* The Close Button */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>
+<body>
+<div style="background: lightgrey">
+    <table style="width: 1400px">
+        <tr>
+
+            <td id="home">
+            </td>
+            <td id="cart" style="margin-top: 30px" hidden>
+                <!-- Trigger/Open The Modal -->
+                <button id="myBtn" onclick="openModal()">Giỏ hàng</button>
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div id="myModalCart" style="margin-top: 50px">
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </td>
+            <td id="main2">
+            </td>
+            <td id="main3">
+            </td>
+            <td style="text-align: right" id="searchProduct">
+            </td>
+            <td style="text-align: center" id="account">
+            </td>
+        </tr>
+    </table>
+</div>
+
+<center>
+        <select id="select" onclick="sortProduct()">
+            <option value="NULL">Danh sách mặc định</option>
+            <option value="actionSortPriceUp">Tăng dần theo giá tiền</option>
+            <option value="actionSortPriceDown">Giảm dần theo giá tiền</option>
+        </select>
+    <div id="main" style="margin-top: 0">
+    </div>
+</center>
+<script src="Constan.js"></script>
+<script src="Sort.js"></script>
+<script src="Cart.js"></script>
+<script src="Product.js"></script>
+<script src="ProductManager.js"></script>
+<script src="History.js"></script>
+<script src="login.js"></script>
+<script src="main.js"></script>
+<script src="Modal.js"></script>
+</body>
+</html>
+
+
+
+

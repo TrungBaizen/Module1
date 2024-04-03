@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<center>
+    <h3>Bạn có thích tôi không và tại sao?</h3>
+    <textarea id="you" cols="40" rows="10" onkeydown="typeTextarea(event)"></textarea>
+</center>
+<script>
+
+    // function typeTextarea() {
+    //     let text = (" Tôi rất thích bạn vì bạn quá tuyệt vời <3 <3 <3 <3");
+    //     let you = document.getElementById("you").value;
+    //     let me = "";
+    //     if (you.length > 0) {
+    //         for (i = 1; i <= you.length; i++) {
+    //             me = me + text[i];
+    //             console.log(you.length)
+    //             if (i == text.length) {
+    //                 document.getElementById("you").value = "";
+    //                 me = "";
+    //                 alert("Cảm ơn nhưng tôi ghét b")
+    //             }
+    //         }
+    //     }
+    //     document.getElementById("you").value = me;
+    //     me = ""
+    //     setTimeout("typeTextarea()", 1);
+    // }
+        let text = (" Tôi rất thích bạn vì bạn quá tuyệt vời <3 <3 <3 <3");
+        let count = 0;
+    function typeTextarea() {
+        event.preventDefault();
+        document.getElementById("you").value += text[count];
+        count++;
+        if (count > text.length){
+            count=0;
+            document.getElementById("you").value ="";
+        }
+    }
+</script>
+</body>
+</html>

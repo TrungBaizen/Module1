@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính S và P hình chữ nhật</title>
+</head>
+<body>
+<input type="number" id="a" placeholder="Nhập chiều dài hình chữ nhật">
+<input type="number" id="b" placeholder="Nhập chiều rộng hình chữ nhật">
+<button onclick="chuvi()">Chu vi</button>
+<button onclick="dientich()">Diện tích</button>
+<script>
+    function chuvi() {
+        let dai = +document.getElementById("a").value;
+        let rong = +document.getElementById("b").value;
+        let chuvi = 2*dai+2*rong;
+        alert("Chu vi hình chữ nhật là : "+chuvi)
+    }
+    function dientich() {
+        let dai = +document.getElementById("a").value;
+        let rong = +document.getElementById("b").value;
+        let dientich = dai*rong;
+        alert("Chu vi hình chữ nhật là : "+dientich)
+    }
+</script>
+</body>
+</html>

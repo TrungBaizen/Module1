@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7.7</title>
+</head>
+<body>
+<script>
+    let a = [];
+    let V = 18;
+    let count = 0;
+    while (true) {
+        let b = prompt("Hãy nhập giá trị mảng a");
+        if (b !== null) {
+            a[a.length] = b;
+        } else {
+            break;
+        }
+    }
+    console.log(a);
+
+    a = [...a];
+    for (let i = 0; i < a.length; i++) {
+        if (V == a[i]) {
+            count = i
+            break;
+        }
+    }
+
+    for (let i = count; i < a.length; i++) {
+        a[i] = a[i + 1];
+    }
+    a[a.length - 1] = 0;
+    console.log(a);
+</script>
+</body>
+</html>

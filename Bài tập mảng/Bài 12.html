@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7.6</title>
+</head>
+<body>
+<input id="nhap" type="text">
+<button onclick="result()">Result</button>
+<script>
+    let a = [];
+
+    function result() {
+        let b = +document.getElementById("nhap").value;
+        a.push(b);
+        let V = 24;
+        for (let i = 0; i <a.length; i++) {
+            if (V === a[i]){
+                console.log("V is in the array")
+            }else {
+                console.log("V is not in the array")
+            }
+        }
+    }
+</script>
+</body>
+</html>

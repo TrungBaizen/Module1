@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    //Hàm tính điểm trung bình của danh sách điểm thi
+    function findAvg(score) {
+        let sum = 0 ;
+        let count =0;
+        for (let i = 0; i < score.length; i++) {
+            sum += score[i];
+            count++;
+        }
+        let avg = sum/count;
+        return avg;
+    }
+    // Khởi tạo mạng điểm từ bàn phím
+    let scores = [];
+    while (true) {
+        let score = prompt("Hãy nhập điểm");
+        // Bắt nút cancel prompt
+        if (score === null) {
+            break;
+        }
+        scores[scores.length] = Number(score);
+    }
+    // Tính điểm trung bình của mảng điểm bằng hàm findAvg(score)
+    let result = findAvg(scores);
+    alert(result)
+</script>
+</body>
+</html>

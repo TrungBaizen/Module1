@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        th input {
+            width: 40px;
+            height: 40px;
+        }
+        td input {
+            height: 30px;
+            text-align: right;
+        }
+    </style>
+    <title>Máy tính</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="4"><input type="text" id="display" value="0" readonly></td>
+    </tr>
+    <tr>
+        <th><input type="button" value="(" onclick="getdata(this.value)"></th>
+        <th><input type="button" value=")" onclick="getdata(this.value)"></th>
+        <th><input type="button" value="%" onclick="getdata(this.value)"></th>
+        <th><input type="button" value="AC" onclick="reset()"></th>
+    </tr>
+    <tr>
+        <th><input type="button" value="7" onclick="getdata(this.value)"></th>
+        <th><input type="button" value="8" onclick="getdata(this.value)"></th>
+        <th><input type="button" value="9" onclick="getdata(this.value)"></th>
+        <th><input type="button" value="/" onclick="getdata(this.value)"></th>
+    </tr>
+    <tr>
+        <th><input type="button" value="4" onclick="getdata(this.value)"></th>
+        <th><input type="button" value="5" onclick="getdata(this.value)"></th>
+        <th><input type="button" value="6" onclick="getdata(this.value)"></th>
+        <th><input type="button" value="*" onclick="getdata(this.value)"></th>
+    </tr>
+    <tr>
+        <th><input type="button" value="1" onclick="getdata(this.value)"></th>
+        <th><input type="button" value="2" onclick="getdata(this.value)"></th>
+        <th><input type="button" value="3" onclick="getdata(this.value)"></th>
+        <th><input type="button" value="-" onclick="getdata(this.value)"></th>
+    </tr>
+    <tr>
+        <th><input type="button" value="0" onclick="getdata(this.value)"></th>
+        <th><input type="button" value="." onclick="getdata(this.value)"></th>
+        <th><input type="button" value="=" onclick="result()"></th>
+        <th><input type="button" value="+" onclick="getdata(this.value)"></th>
+    </tr>
+</table>
+<script>
+    let toString =document.getElementById("display");
+
+    function getdata(value) {
+        toString.value += value;
+    }
+
+    function result() {
+        let result = eval(toString.value);
+        toString.value =result;
+    }
+
+    function reset() {
+        toString.value = "";
+    }
+</script>
+</body>
+</html>

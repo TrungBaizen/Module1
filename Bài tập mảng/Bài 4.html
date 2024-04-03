@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<input type="text" id="englishh" placeholder="Nhập từ cần dịch">
+<button onclick="translateee()">Translate</button>
+<p id="result"></p>
+<script>
+    function translateee() {
+        let english = ["apple", "banana", "pineapple", "orange"];
+        let vietnamese = ["táo", "chuối", "dứa", "cam"];
+        let iEnglish = document.getElementById("englishh").value;
+        for (i = 0; i < english.length; i++) {
+            if (iEnglish == english[i]) {
+                document.getElementById("result").innerHTML = "Result: " + vietnamese[i];
+            } else if (iEnglish == vietnamese[i]){
+                document.getElementById("result").innerHTML = "Result: " + english[i];
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Curency</th>
+        <th>To Curency</th>
+        <td></td>
+    </tr>
+    <tr>
+        <td><input type="text" id="sotien"></td>
+        <td>
+            <select id="loaitien">
+                <option value="VNĐ">VNĐ</option>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+        <td>
+            <select id="loaitien2">
+                <option value="VNĐ">VNĐ</option>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+        <td><button onclick="doitien()">Convert</button></td>
+    </tr>
+</table>
+<p id="result"></p>
+<script>
+    function doitien() {
+        let sotien = document.getElementById("sotien").value;
+        let loaitien = document.getElementById("loaitien").value;
+        let loaitien2 = document.getElementById("loaitien2").value;
+        let ketqua ;
+        if (loaitien == "USD" && loaitien2 == "VNĐ") {
+            ketqua = "Result:" + (sotien * 23000) + "Đ";
+        }
+        else if (loaitien == "VNĐ" && loaitien2 == "USD") {
+            ketqua = "Result:" + (sotien / 23000) + "$";
+        }
+        else if (loaitien == "VNĐ") {
+            ketqua ="Result:" + sotien + "Đ";
+        } else {
+            ketqua ="Result:" + sotien + "$";
+        }
+        document.getElementById("result").innerHTML = ketqua;
+    }
+
+
+</script>
+</body>
+</html>

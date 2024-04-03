@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<h3>Bài 1</h3>
+<input type="number" id="c" onchange="quydoi()" placeholder="Nhập độ C">
+<p id="result1"></p>
+<hr>
+<h3>Bài 2</h3>
+<input type="number" id="m" onchange="quydoi1()" placeholder="Nhập số m">
+<p id="result2"></p>
+<hr>
+<h3>Bài 3</h3>
+<input type="number" id="a" onchange="quydoi2()" placeholder="Nhập chiều dài cạnh a">
+<p id="result3"></p>
+<hr>
+<h3>Bài 4</h3>
+<input type="number" id="canha" placeholder="Nhập chiều dài cạnh a">
+<input type="number" id="canhb" placeholder="Nhập chiều dài cạnh b">
+<button onclick="quydoi3()">Kết quả</button>
+<p id="result4"></p>
+<hr>
+<h3>Bài 5</h3>
+<input type="number" id="canhkea" placeholder="Nhập chiều dài cạnh kề a">
+<input type="number" id="canhkeb" placeholder="Nhập chiều dài cạnh kề b">
+<button onclick="quydoi4()">Kết quả</button>
+<p id="result5"></p>
+<hr>
+<h3>Bài 6</h3>
+<p>Ta có phương trình bậc 1 dưới dạng sau ax + b =c</p>
+<input type="number" id="soa" placeholder="Nhập giá trị của a">
+<input type="number" id="sob" placeholder="Nhập giá trị của b">
+<input type="number" id="soc" placeholder="Nhập giá trị của c">
+<button onclick="quydoi5()">Kết quả</button>
+<p id="result6"></p>
+<hr>
+<h3>Bài 7</h3>
+<p>Ta có phương trình bậc 1 dưới dạng sau ax^2 + b =c</p>
+<input type="number" id="sA" placeholder="Nhập giá trị của a">
+<input type="number" id="sB" placeholder="Nhập giá trị của b">
+<input type="number" id="sC" placeholder="Nhập giá trị của c">
+<button onclick="quydoi6()">Kết quả</button>
+<p id="result7"></p>
+<hr>
+<h3>Bài 8</h3>
+<input type="number" id="age" onchange="quydoi7()" placeholder="Nhập số tuổi">
+<p id="result8"></p>
+<hr>
+<h3>Bài 9</h3>
+<input type="number" id="canhtga" placeholder="Nhập giá trị của a">
+<input type="number" id="canhtgb" placeholder="Nhập giá trị của b">
+<input type="number" id="canhtgc" placeholder="Nhập giá trị của c">
+<button onclick="quydoi8()">Kết quả</button>
+<p id="result9"></p>
+<hr>
+<h3>Bài 10</h3>
+<pre>Giá điện tính theo 6 bậc:
+Bậc 1 từ 0-50 kWh là 1806/1hWh
+Bậc 2 từ 51-100 kWh là 1866/1hWh
+Bậc 3 từ 101-200 kWh là 2167/1hWh
+Bậc 4 từ 201-300 kWh là 2729/1hWh
+Bậc 5 từ 301-400 kWh là 3050/1hWh
+Bậc 6 từ 401 kWh trở lên là 3151/1hWh
+</pre>
+<input type="number" id="sodien" onchange="quydoi9()" placeholder="Nhập số điện gia đình bạn">
+<p id="result10"></p>
+<hr>
+<H3>Bài 11</H3>
+<pre>Thuế thu nhập cá nhân theo 7 bậc:
+Bậc 1 từ 0-60 triệu/năm là 5%/năm
+Bậc 2 từ 60-120 triệu/năm là 10%/năm
+Bậc 3 từ 120-216 triệu/năm là 15%/năm
+Bậc 4 từ 216-384 triệu/năm là 20%/năm
+Bậc 5 từ 384-624 triệu/năm là 25%/năm
+Bậc 6 từ 624-960 triệu/năm là 30%/năm
+Bậc 7 từ 960 triệu/năm trở lên là 35%/năm
+</pre>
+<input type="number" id="soluong" onchange="quydoi10()" placeholder="Nhập tiền lương 1 năm">
+<p id="result11"></p>
+<hr>
+<h3>Bài 12</h3>
+<p>Phầm mềm tính số tiền lãi ngân hàng</p>
+<input type="number" id="tienvay" placeholder="Nhập số tiền vay">
+<input type="number" id="sothang" placeholder="Nhập số tháng vay">
+<input type="number" id="laixuat" placeholder="Nhập số lãi xuất mỗi năm">
+<button onclick="quydoi11()">Kết quả</button>
+<p id="result12"></p>
+</body>
+<script>
+    function quydoi() {
+        let c = document.getElementById("c").value;
+        let f = c * 9 / 5 + 32;
+        document.getElementById("result1").innerHTML = "Độ F sau quy đổi là : " + f;
+    }
+
+    function quydoi1() {
+        let m = document.getElementById("m").value;
+        let ft = m * 3.2808;
+        document.getElementById("result2").innerHTML = "Số ft sau quy đổi là : " + ft;
+    }
+
+    function quydoi2() {
+        let a = document.getElementById("a").value;
+        let s = a * a;
+        document.getElementById("result3").innerHTML = "Diện tích hình vuông là : " + s;
+    }
+
+    function quydoi3() {
+        let canha = document.getElementById("canha").value;
+        let canhb = document.getElementById("canhb").value;
+        let dientich = canha * canhb
+        document.getElementById("result4").innerHTML = "Diện tích hình chữ nhật là : " + dientich;
+    }
+
+    function quydoi4() {
+        let canhkea = document.getElementById("canhkea").value;
+        let canhkeb = document.getElementById("canhkeb").value;
+        let stamgiac = 0.5 * canhkeb * canhkea;
+        document.getElementById("result5").innerHTML = "Diện tích tam giác vuông là : " + stamgiac;
+    }
+
+    function quydoi5() {
+        let biena = document.getElementById("soa").value;
+        let bienb = document.getElementById("sob").value;
+        let bienc = document.getElementById("soc").value;
+        let kq = (bienc - bienb) / biena;
+        document.getElementById("result6").innerHTML = "X = " + kq;
+    }
+
+    function quydoi6() {
+        let sA = document.getElementById("sA").value;
+        let sB = document.getElementById("sB").value;
+        let sC = document.getElementById("sC").value;
+        let kqua = Math.sqrt((sC - sB) / sA);
+        document.getElementById("result7").innerHTML = "X = " + kqua;
+    }
+
+    function quydoi7() {
+        let age = document.getElementById("age").value;
+        if (age >= 0 && age <= 120) {
+            document.getElementById("result8").innerHTML = "Đây là số tuổi của 1 con người";
+        } else {
+            document.getElementById("result8").innerHTML = "Đây là không phải số tuổi của 1 con người";
+
+        }
+    }
+
+    function quydoi8() {
+        let ca = +document.getElementById("canhtga").value;
+        let cb = +document.getElementById("canhtgb").value;
+        let cc = +document.getElementById("canhtgc").value;
+        if (ca > 0 && cb > 0 && cc > 0) {
+            if ((ca + cb) > cc && (ca + cc) > cb && (cb + cc) > ca) {
+                document.getElementById("result9").innerHTML = "a , b , c là cạnh của 1 tam giác";
+            }
+        }
+    }
+
+    function quydoi9() {
+        let sodien = document.getElementById("sodien").value;
+        let kqdien = 0;
+        if (sodien >= 0 && sodien <= 50) {
+            kqdien = sodien * 1806;
+        } else if (sodien > 50 && sodien <= 100) {
+            kqdien = (sodien - 50) * 1866 + 50 * 1806;
+        } else if (sodien > 100 && sodien <= 200) {
+            kqdien = (sodien - 100) * 2167 + 50 * 1866 + 50 * 1806;
+        } else if (sodien > 200 && sodien <= 300) {
+            kqdien = (sodien - 200) * 2729 + 50 * 1806 + 50 * 1866 + 100 * 2167;
+        } else if (sodien > 300 ** sodien <= 400) {
+            kqdien = (sodien - 300) * 3050 + 50 * 1806 + 50 * 1866 + 100 * 2167 + 100 * 2729;
+        } else {
+            kqdien = (sodien - 400) * 3151 + 50 * 1806 + 50 * 1866 + 100 * 2167 + 100 * 2729 + 100 * 3050;
+        }
+        document.getElementById("result10").innerHTML = "Số tiền điện phải trả là : " + kqdien + " VNĐ"
+    }
+
+    function quydoi10() {
+        let soluong = document.getElementById("soluong").value;
+        let sotienthue = 0;
+        if (soluong > 0 && soluong <= 60) {
+            sotienthue = soluong * 0.05;
+        } else if (soluong > 60 && soluong <= 120) {
+            sotienthue = soluong * 0.1;
+        } else if (soluong > 120 && soluong <= 216) {
+            sotienthue = soluong * 0.15;
+        } else if (soluong > 216 && soluong <= 384) {
+            sotienthue = soluong * 0.2;
+        } else if (soluong > 384 && soluong <= 624) {
+            sotienthue = soluong * 0.25;
+        } else if (soluong > 624 && soluong <= 960) {
+            sotienthue = soluong * 0.3;
+        } else if (soluong <= 0) {
+            sotienthue = 0;
+        } else {
+            sotienthue = soluong * 0.35;
+        }
+        document.getElementById("result11").innerHTML = "Số tiền thuế phải đóng là : " + sotienthue + " Triệu Đồng";
+    }
+
+    function quydoi11() {
+        let tienvay = +document.getElementById("tienvay").value;
+        let sothang = +document.getElementById("sothang").value;
+        let laixuat = +(document.getElementById("laixuat").value)/100;
+        let sonam = sothang / 12;
+        let tientong = tienvay * (Math.pow(1 + (laixuat / sothang), (sothang * sonam)));
+        let tienlai = tientong - tienvay;
+        document.getElementById("result12").innerHTML = "Số tiền lãi = " + tienlai + " và số tiền tổng phải trả = " + tientong;
+    }
+</script>
+</html>

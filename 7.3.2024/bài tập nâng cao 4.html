@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài tập nâng cao 4</title>
+</head>
+<body>
+<input type="number" id="soa" placeholder="Số a">
+<input type="number" id="sob" placeholder="Số b">
+<button onclick="raketqua()">Tính</button>
+<script>
+    function raketqua() {
+        let a =Number(document.getElementById("soa").value);
+        let b =Number(document.getElementById("sob").value);
+        let kq = a + b;
+        console.log("Số a là :" + a);
+        console.log("Số b là :" + b);
+        console.log("Tổng a và b là :" + kq);
+        alert("Số a là :" + a);
+        alert("Số b là :" + b);
+        alert("Tổng a và b là :" + kq);
+        document.writeln("Số a là :" + a);
+        document.writeln("Số b là :" + b);
+        document.write("Tổng a và b là :" + kq);
+    }
+</script>
+</body>
+</html>

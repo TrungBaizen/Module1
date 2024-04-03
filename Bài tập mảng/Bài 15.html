@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7.9</title>
+</head>
+<body>
+<input id="nhap1" type="text">
+<input id="nhap2" type="text">
+<button onclick="result()">Result</button>
+<script>
+    let a = [];
+    let c = [];
+    function result() {
+        let b = +document.getElementById("nhap1").value;
+        a.push(b);
+        let d = +document.getElementById("nhap2").value;
+        c.push(d);
+        let e =a.concat(c);
+        console.log(e)
+    }
+</script>
+</body>
+</html>

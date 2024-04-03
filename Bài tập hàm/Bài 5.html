@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập quản lý giỏ hàng</title>
+</head>
+<body>
+<h3>Add New Product</h3>
+<div style="border: 20px solid lightgrey ; width: 218px">
+    <input type="text" id="product" placeholder="New Product">
+    <button onclick="addProduct()" style="background: limegreen">Add</button>
+</div>
+<h3>Display All Product</h3>
+<table id="display" style="width: 70% ">
+</table>
+<script>
+    let listProduct = [];
+    displayProduct();
+
+    function displayProduct() {
+        let s = ""
+        s += `<tr>`
+        s += `<td> <h4>Product Name</h4></td>`
+        s += `</tr>`
+        for (let i = 0; i < listProduct.length; i++) {
+            s += `<tr class="product" style="font-size: 15px ; background: lightgrey" >`
+            s += `<td>${listProduct[i]} </td> `
+            s += `<td><input type="button" value="EDIT" onclick="editProduct(${i})" style="background: limegreen " > </td> `
+            s += `<td><input type="button" value="DELETE" onclick="deleteProduct(${i})" style="background: limegreen" > </td> `
+            s += `</tr>`
+        }
+        document.getElementById("display").innerHTML = s;
+    }
+
+    function addProduct() {
+        let product = document.getElementById("product").value;
+        listProduct.push(product);
+        displayProduct();
+        document.getElementById("product").value ="";
+    }
+
+    function editProduct(index) {
+        listProduct[index] = prompt("Nhập tên cần sửa:  ");
+        displayProduct();
+    }
+
+    function deleteProduct(index) {
+        listProduct.splice(index, 1);
+        displayProduct();
+    }
+
+</script>
+</body>
+</html>

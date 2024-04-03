@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Số Nguyên Tố</title>
+</head>
+<body>
+<script>
+    let number = +prompt()
+    let count = 0;
+    for (i = 1; i < 10000; i++) {
+        if (number % i === 0) {
+            count++
+        }
+    }
+    if (count === 2) {
+        alert("Đây là số nguyên tố")
+    } else {
+        alert("Đây không phải là số nguyên tố")
+    }
+
+</script>
+</body>
+</html>

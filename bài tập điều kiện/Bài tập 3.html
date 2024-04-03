@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th input {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th colspan="4"><input type="text" id="display" readonly><br></th>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="1" onclick="inputValue(event)">
+            </td>
+            <td>
+                <input type="button" value="2" onclick="inputValue(event)">
+            </td>
+            <td>
+                <input type="button" value="3" onclick="inputValue(event)">
+            </td>
+            <td>
+                <input type="button" value="+" onclick="inputValue(event)">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="button" value="4" onclick="inputValue(event)">
+            </td>
+            <td>
+                <input type="button" value="5" onclick="inputValue(event)">
+            </td>
+            <td>
+                <input type="button" value="6" onclick="inputValue(event)">
+            </td>
+            <td>
+                <input type="button" value="-" onclick="inputValue(event)">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="7" onclick="inputValue(event">
+            </td>
+            <td>
+                <input type="button" value="8" onclick="inputValue(event)">
+            </td>
+            <td>
+                <input type="button" value="9" onclick="inputValue(event)">
+            </td>
+            <td>
+                <input type="button" value="*" onclick="inputValue(event)">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="C" onclick="xoa();">
+            </td>
+            <td>
+                <input type="button" value="0" onclick="inputValue(event)">
+            </td>
+            <td>
+                <input type="button" value="="  onclick="result();">
+            </td>
+            <td>
+                <input type="button" value="/" onclick="inputValue(event)">
+            </td>
+        </tr>
+    </table>
+<script>
+    let valueString = "";
+
+    function inputValue(event) {
+        let data = event.target.value;
+        valueString += data;
+        document.getElementById("display").value = valueString;
+    }
+    function xoa() {
+        valueString= "";
+        document.getElementById("display").value = 0;
+    }
+    function result() {
+        let kq = eval(valueString);
+        document.getElementById("display").value = kq;
+    }
+</script>
+</body>
+</html>

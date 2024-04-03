@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý</title>
+</head>
+<body>
+<center>
+    <h3>Thêm sản phẩm</h3>
+    <input type="text" placeholder="Sản phẩm mới" id="new-product">
+    <span id="add"><button onclick="add()">Thêm mới</button></span>
+    <span id="btn-edit"></span>
+
+    <h3>Danh sách sản phẩm</h3>
+    <table border="1">
+        <tr>
+            <th>Tên sản phẩm</th>
+            <th colspan="2">Hành động</th>
+        </tr>
+        <tbody id="list">
+
+        </tbody>
+    </table>
+</center>
+
+<script>
+    let arr = ["Iphone", "Samsung", "Redmi", "Apple"];
+
+    function add() {
+        let newProduct = document.getElementById('new-product').value;
+        arr.push(newProduct);
+        alert("Thêm thành công");
+        showAll();
+        document.getElementById("new-product").value = "";
+    }
+
+    function remove(index) {
+        arr.splice(index, 1);
+        alert("Xóa thành công")
+        showAll();
+    }
+
+    function showFormEdit(index) {
+        document.getElementById("add").innerHTML = "";
+        document.getElementById("btn-edit").innerHTML = `<button onclick="edit(${index})">Sửa</button>`;
+        document.getElementById("new-product").value = arr[index];
+    }
+
+    function edit(index) {
+        let product = document.getElementById("new-product").value;
+        arr[index] = product;
+        alert("Sửa thành công")
+        showAll();
+    }
+
+    function showAll() {
+        document.getElementById("new-product").value = "";
+        document.getElementById("btn-edit").innerHTML = "";
+        document.getElementById("add").innerHTML = `<button onClick="add()">Thêm mới</button>`;
+
+        let html = '';
+        for (let i = 0; i < arr.length; i++) {
+            html += `
+        <tr>
+            <td>${arr[i]}</td>
+            <td><button onclick="showFormEdit(${i})">Sửa</button></td>
+            <td><button onclick="remove(${i})">Xóa</button></td>
+        </tr>
+        `
+        }
+        document.getElementById('list').innerHTML = html;
+    }
+
+    showAll();
+
+
+</script>
+</body>
+</html>

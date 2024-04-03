@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập sinh viên</title>
+</head>
+<body>
+<script>
+    // class Student {
+    //     constructor(name, age, point) {
+    //         this.name = name;
+    //         this.age = age;
+    //         this.point = point;
+    //     }
+    //     diemtrungbinh() {
+    //         let count = 0;
+    //         let sum = 0;
+    //         for (let i = 0; i < this.point.length; i++) {
+    //             sum += this.point[i];
+    //             count++
+    //         }
+    //         return sum / count;
+    //     }
+    // }
+    //
+    // let point1 = [];
+    // while (true) {
+    //     let a = prompt("Nhập điểm sinh viên thứ nhất 1");
+    //     if (a === null) {
+    //         break;
+    //     }
+    //     point1.push(+a);
+    // }
+    // let student1 = new Student("Trung", 26, point1);
+    // let dtb1 = student1.diemtrungbinh()
+    //
+    // let point2 = [];
+    // while (true) {
+    //     let a = prompt("Nhập điểm sinh viên thứ nhất 2");
+    //     if (a === null) {
+    //         break;
+    //     }
+    //     point2.push(+a);
+    // }
+    // let student2 = new Student("Hoàng", 20, point2);
+    // let dtb2 = student2.diemtrungbinh()
+    // if (dtb1<dtb2){
+    //     console.log("Điểm trung bình sv 2 lớn hơn là : "+dtb2);
+    //     console.log(student2);
+    // }else if (dtb1>dtb2){
+    //     console.log("Điểm trung bình sv 1 lớn hơn là : "+dtb1);
+    //     console.log(student2);
+    // }else {
+    //     console.log("Điểm trung bình 2 sv bằng nhau là : "+dtb1);
+    //     console.log(student1);
+    //     console.log(student2);
+    // }
+
+    class Student {
+        constructor(name, age, score) {
+            this.name = name;
+            this.age = age;
+            this.score = score;
+        }
+
+        setName(nameInput) {
+            this.name = name;
+        }
+
+        setAge(age) {
+            this.age = age;
+        }
+
+        setScore(score) {
+            this.score = score;
+        }
+
+        getName() {
+            return this.name
+        }
+
+        getAge() {
+            return this.age
+        }
+
+        getScore() {
+            return this.score
+        }
+
+        getAVG() {
+            let sum = 0;
+            for (let i = 0; i < this.score.length; i++) {
+                sum += this.score[i];
+            }
+            return sum / this.score.length;
+        }
+    }
+
+    let studen1 = new Student("A", 22, [5, 6, 7]);
+    let studen2 = new Student("B", 23, [7, 8, 9]);
+    studen1.setName("C");
+    console.log(studen1.getName());
+    if (studen1.getAVG() > studen2.getAVG()) {
+        console.log(studen1.getName() + " có điểm hơn lơn " + studen2.getName());
+    } else if (studen1.getAVG() < studen2.getAVG()) {
+        console.log(studen2.getName() + " có điểm hơn lơn " + studen1.getName());
+    } else {
+        console.log(studen1.getName() + " có điểm bằng " + studen2.getName());
+    }
+</script>
+</body>
+</html>

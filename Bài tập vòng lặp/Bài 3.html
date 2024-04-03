@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài luyện tập 1</title>
+</head>
+<body>
+<!--<h3>Bài 1</h3>-->
+<!--<script>-->
+<!--    for (i = 0; i <100; i++) {-->
+<!--        document.write(i + " ");-->
+<!--    }-->
+<!--    alert("Hoàn thành");-->
+<!--</script>-->
+
+<!--<script>-->
+<!--    let nhietdo = prompt("Nhập nhiệt độ hiện tại");-->
+<!--    if (nhietdo>100){-->
+<!--        alert("Hãy giảm nhiệt độ nhé");-->
+<!--    }else if (nhietdo<20){-->
+<!--        alert("Hãy tăng nhiệt dộ nhé");-->
+<!--    }else{-->
+<!--        alert("Nhiệt độ tốt");-->
+<!--    }-->
+<!--</script>-->
+
+<!--<script>-->
+<!--    let a = 0;-->
+<!--    let b = 1;-->
+<!--    alert("20 số trong dãy fibonacci là :")-->
+<!--    for ( i = 0; i <20; i++) {-->
+<!--        let c = a + b ;-->
+<!--        a = b ;-->
+<!--        b = c ;-->
+<!--        alert(b)-->
+<!--    }-->
+<!--</script>-->
+
+<!--<script>-->
+<!--    let a = 0;-->
+<!--    let b = 1;-->
+<!--    let c = 0;-->
+<!--    while (b % 5 !== 0) {-->
+<!--        c = a + b;-->
+<!--        a = b;-->
+<!--        b = c;-->
+<!--    }-->
+<!--    alert("Số đầu tiên trong dãy fibonacci chia hết cho 5 là :" + b);-->
+<!--</script>-->
+
+<!--<script>-->
+<!--    let a = 0;-->
+<!--    let b = 1;-->
+<!--    let sum = 1 ;-->
+<!--    for ( i = 0; i <19; i++) {-->
+<!--        let c = a + b ;-->
+<!--        a = b ;-->
+<!--        b = c ;-->
+<!--        sum += b;-->
+<!--    }-->
+<!--    alert("Tổng của 20 số fibonacci là: " +sum);-->
+<!--</script>-->
+
+<!--<script>-->
+<!--    let sum = 0;-->
+<!--    for (i = 0; i <= 210; i += 7) {-->
+<!--        sum += i;-->
+<!--    }-->
+<!--    alert("Tổng của 30 số tự nhiên chia hết cho 7 đầu tiên = " + sum);-->
+<!--</script>-->
+
+<!--<script>-->
+<!--    for (i = 1; i <= 100; i++) {-->
+<!--        if (i % 3 === 0 && i % 5 === 0) {-->
+<!--            document.write(" FizzBuzz ");-->
+<!--        } else if (i % 3 === 0) {-->
+<!--            document.write(" Fizz ");-->
+<!--        } else if (i % 5 === 0) {-->
+<!--            document.write(" Buzz ");-->
+<!--        } else {-->
+<!--            document.write(" " + i + " ");-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+
+<button onclick="begin()">Bắt đầu</button>
+<script>
+    function begin() {
+        let a = +prompt("Hãy nhâp số lớn nhất trong khoảng muốn đoán :");
+        let b = Math.floor(Math.random() * a);
+        let c = +prompt("Hãy nhập số bạn đoán");
+        let d = 0;
+        while (c === b || d !== 3) {
+            if (c === b) {
+                alert("Chúc mừng bạn đã đoán đúng");
+                return;
+            } else if (c > b) {
+                alert("Bán dã đoán lớn hơn");
+                c = +prompt("Hãy nhập số bạn đoán");
+                d++
+            } else if (c < b){
+                alert("bán đã đoán nhỏ hơn");
+                c = +prompt("Hãy nhập số bạn đoán");
+                d++
+            }
+        }
+        alert("Bạn đã hết số lần đoán");
+    }
+</script>
+</body>
+</html>

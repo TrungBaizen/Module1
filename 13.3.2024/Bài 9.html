@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tổng các số chia 5 dư 2 từ a đến b</title>
+</head>
+<body>
+<script>
+    // let a = +prompt("Nhập a");
+    // let b = +prompt("Nhập b");
+    // let sum = 0;
+    // for (i = a; i <= b; i++) {
+    //     if (i % 5 == 2) {
+    //         sum += i;
+    //     } else {
+    //         sum += 0;
+    //     }
+    // }
+    // document.write(sum);
+
+    // let a = +prompt("Nhập a");
+    // let b = +prompt("Nhập b");
+    // let sum = 0;
+    // while (a <= b) {
+    //     if (a % 5 == 2) {
+    //         sum += a;
+    //     } else {
+    //         sum += 0;
+    //     }
+    //     a++
+    // }
+    // document.write(sum);
+
+    let a = +prompt("Nhập a");
+    let b = +prompt("Nhập b");
+    let sum = 0;
+    do{
+        if (a % 5 == 2) {
+            sum += a;
+        } else {
+            sum += 0;
+        }
+        a++
+    }while (a <= b)
+    document.write(sum);
+</script>
+</body>
+</html>

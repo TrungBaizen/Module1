@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<script>
+    let Temperature = function (c, f, k) {
+        this.c = c;
+        this.f = f;
+        this.k = k;
+        this.cF = function () {
+            return c * 9 / 5 + 32;
+        }
+        this.cK = function () {
+            return c + 273.15
+        }
+        this.fC = function () {
+            return (f - 32) * 5 / 9;
+        }
+        this.fK = function () {
+            return ((f - 32) * 5 / 9) + 273.15
+        }
+        this.kC = function () {
+            return k - 273.15
+        }
+        this.kF = function () {
+            return ((k - 273.15) * 9 / 5) + 32
+        }
+    }
+    let temperature = new Temperature(25, 60, 250);
+    let c = temperature.c;
+    let f = temperature.f;
+    let k = temperature.k;
+    let cK = temperature.cK();
+    let cF = temperature.cF();
+    let fC = temperature.fC();
+    let fK = temperature.fK();
+    let kC = temperature.kC();
+    let kF = temperature.kF();
+    document.write("C sang K và F : " + c + " C =" + cK + " K và " + c + " C =" + cF + " F" +"<br>");
+    document.write("F sang K và C : " + f + " F =" + fK + " K và " + f + " F =" + fC + " F" +"<br>");
+    document.write("K sang C và F : " + k + " K =" + kC + " K và " + k + " K =" + kF + " F" +"<br>");
+
+</script>
+</body>
+</html>

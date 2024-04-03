@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích và chu vi hình tròn</title>
+</head>
+<body>
+<h1>Mời nhập bán kính r</h1>
+<input type="number" id="r" placeholder="Bán kinh hình tròn">
+<button onclick="tinhchuvi()">Chu vi</button>
+<button onclick="tinhdientich()">Diện tích</button>
+<script>
+    function tinhchuvi() {
+        let r = Number(document.getElementById("r").value)
+        let p = 2*r*Math.PI;
+        alert("Chu vi hình tròn là : "+p);
+    }
+    function tinhdientich() {
+        let r = Number(document.getElementById("r").value)
+        let s = (Math.PI)*(Math.pow(r,2));
+        alert("Diện tích hình tròn là : "+s);
+    }
+</script>
+</body>
+</html>

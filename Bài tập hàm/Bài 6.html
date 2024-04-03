@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<script>
+    function isPalindrome(a) {
+        let count = 0;
+        for (let i = 0; i <= (a.length) / 2; i++) {
+            if (a[i] !== a[a.length - 1 - i]) {
+                return false
+            }
+        }
+        return true
+    }
+
+    let a = prompt();
+    alert(isPalindrome(a))
+
+    // function isPalaindrome(a,l,r) {
+    //     if (l>=r){
+    //         return true
+    //     }
+    //     if (a[l] !== a[r]){
+    //         return false
+    //     }
+    //     return isPalaindrome(a,l+1,r-1)
+    // }
+    // let a = prompt();
+    // alert(isPalaindrome(a,0,(a.length)-1));
+</script>
+</body>
+</html>

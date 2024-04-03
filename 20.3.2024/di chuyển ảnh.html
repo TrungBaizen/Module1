@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--ảnh đi sang phải : tăng left-->
+<!--ảnh đi lên trên : giảm top-->
+<img src="doremon.jpg" style="width: 200px;top: 100px;left: 200px; ; position:absolute" alt="" id="x">
+<button onclick="right()">Sang phải</button>
+<button onclick="left()">Sang trái</button>
+<button onclick="top1()">Lên trên</button>
+<button onclick="duoi()">Xuống dưới</button>
+<script>
+    let y = document.getElementById("x");
+    let tocDoX = 1;
+    let tocDoY = 1;
+    function right() {
+        y.style.left = parseInt(y.style.left) + tocDoX + "px"
+    }
+
+    function left() {
+        y.style.left = parseInt(y.style.left) - tocDoX + "px"
+    }
+
+    function top1() {
+        y.style.top = parseInt(y.style.top) - tocDoY + "px"
+    }
+
+    function duoi() {
+        y.style.top = parseInt(y.style.top) + tocDoY + "px"
+    }
+
+    setInterval(() => {
+        right()
+        top1()
+        if (parseInt(y.style.left) > window.innerWidth - 1000 || parseInt(y.style.left)<0) {
+            tocDoX = -tocDoX
+        }
+        if (parseInt(y.style.top) > window.innerWidth - 500 || parseInt(y.style.top)<0) {
+            tocDoY = -tocDoY
+        }
+    }, 1);
+</script>
+</body>
+</html>

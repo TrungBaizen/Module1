@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Max</title>
+</head>
+<body>
+<input type="number" id="a" placeholder="Nhập số a">
+<input type="number" id="b" placeholder="Nhập số b">
+<input type="number" id="c" placeholder="Nhập số c">
+<button onclick="max()">Max</button>
+<p id="maxResult"></p>
+<script>
+    function max() {
+        let a =document.getElementById("a").value;
+        let b =document.getElementById("b").value;
+        let c =document.getElementById("c").value;
+        if (a>b && a>c){
+            document.getElementById("maxResult").innerHTML="Số lớn nhất là "+a;
+        }else if (b>c){
+            document.getElementById("maxResult").innerHTML="Số lớn nhất là "+b;
+        }else if (c>b){
+            document.getElementById("maxResult").innerHTML="Số lớn nhất là "+c;
+        }else
+            document.getElementById("maxResult").innerHTML="Không có số lớn nhất vì 3 số bằng nhau"
+    }
+</script>
+</body>
+</html>

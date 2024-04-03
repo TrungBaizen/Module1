@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Độ 0C - 0F</title>
+</head>
+<body>
+<h1>Mời nhập số độ C muốn đổi</h1>
+<input type="number" id="c">
+<button onclick="csangf()">Đổi sang độ F</button>
+<script>
+    function csangf() {
+        let a = Number(document.getElementById("c").value);
+        let b = (a/5)*9 + 32;
+        alert("Độ F sau quy đổi từ độ C là : "+b);
+    }
+</script>
+</body>
+</html>

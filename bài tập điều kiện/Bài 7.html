@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập 1</title>
+</head>
+<body>
+<h3>Bài 1</h3>
+<input type="number" id="a" placeholder="Nhập số a">
+<input type="number" id="b" placeholder="Nhập số b">
+<button onclick="result1()">Kết quả</button>
+<p id="result 1"></p>
+<hr>
+<h3>Bài 2</h3>
+<input type="number" id="age" onchange="result2()" placeholder="Nhập tuổi">
+<p id="result 2"></p>
+<hr>
+<h3>Bài 3</h3>
+<input type="number" id="songuyen" onchange="result3()" placeholder="Nhập số nguyên">
+<p id="result 3"></p>
+<hr>
+<h3>Bài 4</h3>
+<input type="number" id="soa" placeholder="Nhập vào số nguyên a">
+<input type="number" id="sob" placeholder="Nhập vào số nguyên b">
+<input type="number" id="soc" placeholder="Nhập vào số nguyên c">
+<button onclick="result4()">Max</button>
+<p id="result 4"></p>
+<hr>
+<h3>Bài 5</h3>
+<input type="number" id="dkt" placeholder="Nhập vào điểm kiểm tra">
+<input type="number" id="dtgk" placeholder="Nhập vào điểm thi giữa kỳ">
+<input type="number" id="dtck" placeholder="Nhập vào điểm thi cuối kỳ">
+<button onclick="result5()">Đánh giá</button>
+<p id="result 5"></p>
+<hr>
+<h3>Bài 6</h3>
+<p>Đơn vị nhập là triệu đồng</p>
+<input type="number" id="doanhso" placeholder="Nhập vào doanh số bán hàng">
+<button onclick="result6()">Kết quả</button>
+<p id="result 6"></p>
+<hr>
+<h3>Bài 7</h3>
+<input type="number" id="noimang" placeholder="Nhập số phút nội mạng">
+<input type="number" id="ngoaimang" placeholder="Nhập số phút ngoại mạng">
+<button onclick="result7()">Kết quả</button>
+<p id="result 7"></p>
+</body>
+<script>
+    function result1() {
+        let a = document.getElementById("a").value;
+        let b = document.getElementById("b").value;
+        if (a%b==0){
+            document.getElementById("result 1").innerHTML ="Số " + a + " chia hết cho " + b;
+        }else {
+            document.getElementById("result 1").innerHTML ="Số " + a + " không chia hết cho " + b;
+        }
+    }
+    function result2() {
+        let age = document.getElementById("age").value;
+        if (age>=15){
+            document.getElementById("result 2").innerHTML ="Đủ điều kiện vào lớp 10";
+        }else {
+            document.getElementById("result 2").innerHTML ="Không đủ điều kiện vào lớp 10";
+        }
+    }
+    function result3() {
+        let songuyen = document.getElementById("songuyen").value;
+        if (songuyen>0){
+            document.getElementById("result 3").innerHTML="số " + songuyen + " > 0";
+        }else if (songuyen==0){
+            document.getElementById("result 3").innerHTML="số " + songuyen + " = 0";
+        }else {
+            document.getElementById("result 3").innerHTML="số " + songuyen + " < 0";
+        }
+    }
+    function result4() {
+        let soa = document.getElementById("soa").value;
+        let sob = document.getElementById("sob").value;
+        let soc = document.getElementById("soc").value;
+        if (soa > sob && sob > soc){
+            document.getElementById("result 4").innerHTML="Số " + soa + " là số lớn nhất";
+        }else if (sob > soc){
+            document.getElementById("result 4").innerHTML="Số " + sob + " là số lớn nhất";
+        }else if (soc > sob){
+            document.getElementById("result 4").innerHTML="Số " + soc + " là số lớn nhất";
+        }else{
+            document.getElementById("result 4").innerHTML="Không có số lớn nhất vì 3 số bằng nhau";
+        }
+    }
+    function result5() {
+        let dkt = +document.getElementById("dkt").value;
+        let diemgk = +document.getElementById("dtgk").value;
+        let diemck = +document.getElementById("dtck").value;
+        let diemtb = (dkt+diemgk+diemck)/3;
+        if (diemtb>=8){
+            document.getElementById("result 5").innerHTML="Giỏi";
+        }else if (diemtb>=5 && diemtb<8){
+            document.getElementById("result 5").innerHTML="Khá";
+        }else {
+            document.getElementById("result 5").innerHTML="Kém";
+        }
+    }
+    function result6() {
+        let doanhso = document.getElementById("doanhso").value;
+        if (doanhso>=200) {
+            document.getElementById("result 6").innerHTML = "Hoa hồng nhận được là 5% của doanh số";
+        }else if (doanhso>=100){
+            document.getElementById("result 6").innerHTML="Hoa hồng nhân được là 2% của doanh số";
+        }else {
+            document.getElementById("result 6").innerHTML="Không có hoa hồng cần cố gắng hơn";
+        }
+    }
+    function result7() {
+        let noimang = document.getElementById("noimang").value;
+        let ngoaimang = document.getElementById("ngoaimang").value;
+        let sotien1 = 0 ;
+        let sotien2 = 0 ;
+        if (noimang<100){
+            sotien1 = noimang * 790;
+        }else{
+            sotien1 = (noimang-100) * 890 + 100 * 790;
+        }
+        if (ngoaimang<100){
+            sotien2 = ngoaimang * 1000;
+        }else {
+            sotien2 = (ngoaimang-100) * 1250 + 100 * 1000;
+        }
+        let result7 = 22000 + sotien1 + sotien2;
+        document.getElementById("result 7").innerHTML="Cước phải trả là : " + result7
+    }
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8.6</title>
+</head>
+<body>
+<script>
+    let a = [];
+    while (true) {
+        let b = prompt("Hãy thêm giá trị vào hàm");
+        a.push(b);
+        if (b === null) {
+            break;
+        }
+    }
+    console.log(a);
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] === "-") {
+            a[i] = "_";
+        }
+    }
+    console.log(a);
+</script>
+</body>
+</html>

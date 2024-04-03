@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    // Hàm insertNumberToArray dùng để trả về mảng đúng yêu cầu
+    function insertNumberToArray(integers, x, index) {
+        if (index < 0 || index > integers.length) {
+            return integers;
+        } else if (index === integers.length) {
+            integers[integers.length] = x;
+        } else {
+            integers[integers.length] = x;
+            for (let i = integers.length - 1; i > index; i--) {
+                let swap = integers[i];
+                integers[i] = integers[i - 1];
+                integers[i - 1] = swap;
+            }
+        }
+        return integers;
+    }
+
+    // Khởi tạo mảng số nguyên được nhập từ bàn phím
+    let integers = [];
+    while (true) {
+        let integer = prompt("Hãy nhập số nguyên để thêm vào mảng");
+        // Bắt nút cancel prompt
+        if (integer === null) {
+            break;
+        }
+        integers[integers.length] = Number(integer);
+    }
+    // Khởi tạo số nguyên x từ bàn phím
+    let x = Number(prompt("Hãy nhập số nguyên x"));
+    // Khởi tạo số nguyên vị trị index từ bàn phím
+    let index = Number(prompt("Hãy nhập số nguyên vị trí index"));
+    let result = insertNumberToArray(integers, x, index);
+    console.log(result);
+</script>
+</body>
+</html>

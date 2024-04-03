@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hình chữ nhật</title>
+</head>
+<body>
+<script>
+    // let Rectangle = function(width,height) {
+    //
+    //     this.width = width;
+    //     this.height = height;
+    //     this.getS = function() {
+    //         return width*height;
+    //     }
+    //     this.getP = function() {
+    //         return width*2+height*2;
+    //     }
+    //
+    // };
+    // let w = prompt("Nhập chiều dài")
+    // let h = prompt("Nhập chiều rồng")
+    // let rectangle = new Rectangle(w,h);
+    // let width = rectangle.width;
+    // let height = rectangle.height;
+    // let getS = rectangle.getS();
+    // let getP = rectangle.getP();
+    // alert("width: " + width +  " height: " + height + " Diện tích: " + getS + " Chu vi: " +getP);
+    class Rectangle {
+        constructor(length, width) {
+            this.length = length;
+            this.width = width;
+        }
+
+        getS() {
+            return this.length * this.width;
+        }
+
+        getP() {
+            return this.length * 2 + this.width * 2;
+        }
+    }
+
+    let l = prompt("Nhập chiều dài");
+    let w = prompt("Nhập chiều rộng");
+    let rectangle = new Rectangle(l, w)
+    console.log("Dài : " + l + " Rộng : " + w + " Diện tích : " + rectangle.getS() + " Chu vi : " + rectangle.getP())
+</script>
+</body>
+</html>

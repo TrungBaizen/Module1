@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product List</title>
+    <style>
+        #product-container {
+            margin-top: 20px;
+        }
+
+        #product-container ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #product-container ul li {
+            margin-bottom: 5px;
+        }
+
+        #product-container ul li span {
+            cursor: pointer;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+<h3>Add New Product</h3>
+<input type="text" id="new-product" placeholder="Enter product name">
+<button onclick="addProduct()">Add Product</button>
+<h3>Display All Product</h3>
+<h4>Product Name</h4>
+<ul id="product-list"></ul>
+
+<script>
+    // Initialize array to store products
+    let products = [];
+
+    // Function to render product list
+    function renderProductList() {
+        const productListElement = document.getElementById('product-list');
+        productListElement.innerHTML = '';
+
+        products.forEach((product, index) => {
+            const li = document.createElement('li');
+            li.textContent = product.name;
+            const editButton = document.createElement('span');
+            editButton.textContent = 'Edit';
+            editButton.onclick = function () {
+                editProduct(index);
+            };
+            const deleteButton = document.createElement('span');
+            deleteButton.textContent = 'Delete';
+            deleteButton.onclick = function () {
+                deleteProduct(index);
+            };
+
+            li.appendChild(editButton);
+            li.appendChild(deleteButton);
+            productListElement.appendChild(li);
+        });
+    }
+
+    // Function to add new product
+    function addProduct() {
+        const newProductInput = document.getElementById('new-product');
+        const newProductName = newProductInput.value.trim();
+        if (newProductName !== '') {
+            const newProduct = {
+                name: newProductName
+            };
+            products.push(newProduct);
+            renderProductList();
+            newProductInput.value = '';
+        }
+    }
+
+    // Function to edit product name
+    function editProduct(index) {
+        const newProductName = prompt('Edit product name:', products[index].name);
+        if (newProductName !== null) {
+            products[index].name = newProductName.trim();
+            renderProductList();
+        }
+    }
+
+    // Function to delete product
+    function deleteProduct(index) {
+        products.splice(index, 1);
+        renderProductList();
+    }
+
+    // Initial render
+    renderProductList();
+</script>
+
+</body>
+</html>

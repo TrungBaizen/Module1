@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7.5</title>
+</head>
+<body>
+<input id="nhap" type="text" >
+<button onclick="result()">Result</button>
+<script>
+    let a = []fal;
+
+    function result() {
+        let b = +document.getElementById("nhap").value;
+        a.push(b)
+        let c = [];
+        let d = 0 ;
+        for (let i = 0; i < a.length; i++) {
+            if (a[i]<0){
+               c.push(a[i]);
+               d++
+            }
+        }
+        console.log(c)
+        console.log(d)
+    }
+</script>
+</body>
+</html>

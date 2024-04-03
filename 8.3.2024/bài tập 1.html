@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài điểm trung bình và tổng</title>
+</head>
+<body>
+<h1>Điểm Lý là:</h1>
+<input type="number" id="ly">
+<h1>Điểm Hóa là:</h1>
+<input type="number" id="hoa">
+<h1>Điểm Sinh là:</h1>
+<input type="number" id="sinh">
+<br>
+<button onclick="tinhtb()">Điểm Trung Bình và Tổng</button>
+
+<script>
+    function tinhtb() {
+        let a = Number(document.getElementById("ly").value);
+        let b = Number(document.getElementById("hoa").value);
+        let c = Number(document.getElementById("sinh").value);
+        let tong = a+b+c;
+        let tb = tong/3;
+        document.writeln("Điểm tổng là:" + tong);
+        document.writeln("Điểm trung bình là:" + tb);
+    }
+</script>
+</body>
+</html>

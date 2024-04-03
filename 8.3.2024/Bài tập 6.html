@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+</head>
+<body>
+<div>
+    <table>
+        <tr>
+            <th colspan="4">Caculator</th>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="number" id="soa">
+            </td>
+            <td colspan="2">
+                <input type="number" id="sob">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="cong()">Addition(+)</button>
+            </td>
+            <td>
+                <button onclick="tru()">Subtration(-)</button>
+            </td>
+            <td>
+                <button onclick="nhan()">Multiplication(*)</button>
+            </td>
+            <td>
+                <button onclick="chia()">Division(/)</button>
+            </td>
+        </tr>
+    </table>
+</div>
+<p id="ketqua"></p>
+<script>
+    function cong() {
+        let a = +document.getElementById("soa").value;
+        let b = Number(document.getElementById("sob").value);
+        let cong = a+b;
+        document.getElementById("ketqua").innerHTML= "Result Division : " +cong;
+    }
+    function tru() {
+        let a = Number(document.getElementById("soa").value);
+        let b = Number(document.getElementById("sob").value);
+        let tru = a-b;
+        document.getElementById("ketqua").innerHTML= "Result Division : " +tru;
+    }
+    function nhan() {
+        let a = Number(document.getElementById("soa").value);
+        let b = Number(document.getElementById("sob").value);
+        let nhan = a*b;
+        document.getElementById("ketqua").innerHTML= "Result Division : " +nhan;
+    }
+    function chia() {
+        let a = Number(document.getElementById("soa").value);
+        let b = Number(document.getElementById("sob").value);
+        let chia = a/b;
+        document.getElementById("ketqua").innerHTML= "Result Division : " +chia;
+    }
+</script>
+</body>
+</html>

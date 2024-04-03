@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<script>
+    class Circle {
+        constructor(x, y, radius, color) {
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+            this.color = color;
+        }
+
+        render(canvas) {
+            const ctx = canvas.getContext('2d');
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+            ctx.fillStyle = this.color;
+            ctx.fill();
+            ctx.closePath();
+        }
+    }
+
+    // Tạo một canvas
+    const canvas = document.createElement('canvas');
+    canvas.width = 250;
+    canvas.height = 250;
+    document.body.appendChild(canvas);
+
+    // Tạo một hình tròn mới
+    const circle = new Circle(80, 80, 80, '#000000');
+
+    // Hiển thị hình tròn trên canvas
+    circle.render(canvas);
+</script>
+</body>
+</html>

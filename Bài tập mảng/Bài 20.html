@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8.5</title>
+</head>
+<body>
+<script>
+    let a = [];
+    let b = []
+    let count = 0;
+    while (true){
+        let c = prompt("Hãy nhập giá trị mảng a");
+        let d = prompt("Hãy nhập giá trị mảng b");
+        a.push(c);
+        b.push(d);
+        if (c===null || d===null){
+            break;
+        }
+    }
+    for (let i = 0; i < a.length; i++) {
+        if (a[i]===b[i]){
+            count++
+        }
+    }
+    console.log(a);
+    console.log(b);
+    if (count===a.length){
+        alert("2 Mảng vừa nhập vào giống nhau")
+    }else{
+        alert("2 Mảng vừa nhập vào khác nhau")
+    }
+</script>
+</body>
+</html>

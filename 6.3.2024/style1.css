@@ -1,0 +1,11 @@
+th{
+    color: white;
+    background: orangered;
+    text-align: center;
+}
+td{
+    color: blue;
+}
+input{margin: 5px }
+table{margin-left: auto;
+    margin-right: auto;}

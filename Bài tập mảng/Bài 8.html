@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7.2</title>
+</head>
+<body>
+<input id="nhap" type="text" >
+<button onclick="result()">Result</button>
+<script>
+    let a = [];
+    function result() {
+        let b = document.getElementById("nhap").value;
+        let c = [];
+        for (let i = 1; i <a.length+1; i++) {
+            if (a[i]>=10){
+                a.push(b);
+                c.push(a[i]);
+            }
+        }
+        console.log("Mảng chúng ta nhập vào là: "+a)
+        console.log("Số phần tử >10: "+c.length);
+        console.log("Gồm những phần tử: "+c);
+    }
+</script>
+</body>
+</html>

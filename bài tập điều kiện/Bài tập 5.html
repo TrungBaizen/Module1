@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Do you love me</title>
+</head>
+<body>
+<h2 style="position:relative;">Do you love me ?</h2>
+<input type="button" value="YES" onclick="yes()" style="position:absolute">
+<input type="button" value="NO" id="no" onmouseover="no()" style="position:absolute; left:60px">
+<script>
+    function yes() {
+        alert("I hate you")
+    }
+    function no() {
+        let b = Math.random()*window.innerHeight
+        let a = Math.random()*window.innerWidth
+        document.getElementById("no").style.left = a + "px";
+        document.getElementById("no").style.top = b + "px";
+    }
+</script>
+</body>
+</html>

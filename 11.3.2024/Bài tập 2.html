@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+<input type="number" id="number" placeholder="Nhập a" onchange="chanle()">
+<script>
+    function chanle() {
+        let number = document.getElementById("number").value;
+        if (number%2==0){
+            alert("Hello")
+        }else {
+            alert("Hi")
+        }
+    }
+</script>
+</body>
+</html>

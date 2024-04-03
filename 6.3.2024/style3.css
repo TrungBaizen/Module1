@@ -1,0 +1,17 @@
+th{
+    background: yellow;
+}
+table {
+    width: 45%;
+    border-collapse: collapse;
+
+}
+
+th, td {
+    border: 2px solid black;
+    padding: 8px;
+    text-align: left;
+}
+h1{
+   margin-left: 50px;
+}

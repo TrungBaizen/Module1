@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1.3</title>
+</head>
+<body>
+<script>
+    let a = prompt();
+    let aupper = a.toUpperCase()
+    let alower = a.toLowerCase()
+    let b = [];
+    for (i = 0; i < a.length; i++) {
+        if (aupper[i] === a[i]) {
+            b.push(a[i].toLowerCase())
+        }
+        if (alower[i] === a[i]) {
+            b.push(a[i].toUpperCase())
+        }
+    }
+    console.log(b.join(""))
+</script>
+</body>
+</html>

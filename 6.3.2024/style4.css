@@ -1,0 +1,17 @@
+th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 8px;
+    text-align: left;
+}
+h1{
+    margin-left: 150px;
+    color: blue;
+}
+p,pre{
+    color: blue;
+}
+th{
+    text-align: center;
+}
+table{border-collapse: collapse}

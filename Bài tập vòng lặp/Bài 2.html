@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = prompt()
+    let count = 1;
+    document.write(2 + "<br>");
+    for (i = 3; i < 1000; i += 2) {
+        for (j = i - 1; j >= 2; j--) {
+            if (j === 2 && count<number) {
+                count++
+                document.write(i+"<br>");
+            } else {
+                if (i % j !== 0) {
+                    continue;
+                } else {
+                    break;
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

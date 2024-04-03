@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    // Hàm isPrime(Num) để tìm ra các số nguyên tố từ 0 - num
+    function isPrime(num) {
+        if (num <= 1) {
+            return false;
+        }
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // Hàm sumOfListPrime(x) để tính tổng các số nguyên tố tìm được ở hàm isPrime
+    function sumOfListPrime(x) {
+        let sum = 0;
+        for (let i = 2; i <= x; i++) {
+            if (isPrime(i)) {
+                sum += i;
+            }
+        }
+        return sum;
+    }
+
+    // Khởi tạo biến số nguyên X
+    let x = Number(prompt());
+    console.log("Tổng các số nguyên từ 0 đến ", x, " là `: ", sumOfListPrime(x));
+</script>
+</body>
+</html>

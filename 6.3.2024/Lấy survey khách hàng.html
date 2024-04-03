@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style5.css">
+    <title>Lấy survey khách hàng</title>
+</head>
+<body>
+<form>
+    <h1>Market Research Survey</h1>
+    <p>Please take a few moments to complete this satisfaction survay</p>
+    <h3>What is your age range?</h3>
+    <select style="width: 250px">
+        <option>18-24</option>
+        <option>24-30</option>
+        <option>>30<option>
+    </select>
+    <h3>What is your yearly income range?</h3>
+    <select style="width: 250px">
+        <option>$0 - $25000</option>
+        <option>$25000 - $50000</option>
+        <option>>$50000<option>
+    </select>
+    <h3>Gender</h3>
+    <input type="radio" name="gender">
+    <p>Male</p><br>
+    <input type="radio" name="gender">
+    <p>Female</p>
+    <h3>Which of the following products have your purchased in the last 2 months.Please check all that apply</h3>
+    <input type="checkbox" name="pro">
+    <p>Product 1</p><br>
+    <input type="checkbox" name="pro">
+    <p>Product 2</p><br>
+    <input type="checkbox" name="pro">
+    <p>Product 3</p>
+    <h3>How often would you use our new product</h3>
+    <input type="radio" name="often">
+    <p>Daily</p><br>
+    <input type="radio" name="often">
+    <p>Weekly</p><br>
+    <input type="radio" name="often">
+    <p>Monthly</p>
+    <h3>What would you pay for the new product?</h3>
+    $<input type="number" name="money" style="width: 100px">
+    .<input type="number" name="money" style="width: 10px">
+    <h3>What features would you like to see in the product</h3>
+    <textarea cols="120px" rows="10px"></textarea><br>
+    <p>Please rate your level of agreement with the following statements</p>
+    <table class="equal-width-table">
+        <tr>
+            <td style="background: lightslategray"></td>
+            <td style="background: lightslategray">Strongly Disagree</td>
+            <td style="background: lightslategray">Disagree</td>
+            <td style="background: lightslategray">Agree</td>
+            <td style="background: lightslategray">Strongly Agree</td>
+        </tr>
+        <tr>
+            <th>Our products are priced fairly</th>
+            <td>
+                <input type="radio" name="number">
+                <p>1</p>
+            </td>
+            <td>
+                <input type="radio" name="number">
+                <p>2</p>
+            </td>
+            <td>
+                <input type="radio" name="number">
+                <p>3</p>
+            </td>
+            <td>
+                <input type="radio" name="number">
+                <p>4</p>
+            </td>
+        </tr>
+        <tr>
+            <th>Our products are high quality</th>
+            <td>
+                <input type="radio" name="number">
+                <p>1</p>
+            </td>
+            <td>
+                <input type="radio" name="number">
+                <p>2</p>
+            </td>
+            <td>
+                <input type="radio" name="number">
+                <p>3</p>
+            </td>
+            <td>
+                <input type="radio" name="number">
+                <p>4</p>
+            </td>
+        </tr>
+        <tr>
+            <th>You would recommend our product to a friend or coworker</th>
+            <td>
+                <input type="radio" name="number">
+                <p>1</p>
+            </td>
+            <td>
+                <input type="radio" name="number">
+                <p>2</p>
+            </td>
+            <td>
+                <input type="radio" name="number">
+                <p>3</p>
+            </td>
+            <td>
+                <input type="radio" name="number">
+                <p>4</p>
+            </td>
+        </tr>
+    </table>
+<input type="button" value="Submit">
+</form>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>a và b</title>
+</head>
+<body>
+<input type="number" id="a" placeholder="Nhập số a">
+<input type="number" id="b" placeholder="Nhập số b">
+<button onclick="result()">Result</button>
+<p id="result"></p>
+<script>
+    function result() {
+        let a = +document.getElementById("a").value;
+        let b = +document.getElementById("b").value;
+        let tong = a+b;
+        let tich = a*b;
+        if(a>b){
+            document.getElementById("result").innerHTML ="Tổng 2 số a và b là: "+tong;
+        }else if (a<b){
+            document.getElementById("result").innerHTML ="Tích 2 số a và b là: "+tich;
+        }else {
+            document.getElementById("result").innerHTML ="Hihi"
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7.4</title>
+</head>
+<body>
+<input id="nhap" type="text">
+<button onclick="result()">Result</button>
+<script>
+    let a = [];
+    function result() {
+        let b = +document.getElementById("nhap").value;
+        a.push(b);
+        console.log(a);
+        console.log(a.reverse());
+        a.reverse();
+    }
+</script>
+</body>
+</html>

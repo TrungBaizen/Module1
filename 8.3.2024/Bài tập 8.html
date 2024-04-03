@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>So sánh 2 số</title>
+</head>
+<body>
+<input type="number" id="a" placeholder="Nhập số a">
+<input type="number" id="b" placeholder="Nhập số b">
+<button onclick="ketqua()">Kết quả so sánh</button>
+<script>
+    function ketqua() {
+        let soa = +document.getElementById("a").value;
+        let sob = +document.getElementById("b").value;
+        if (soa==sob){
+            alert("Kết quả so sánh a và b là : "+soa+""+"="+""+sob);
+        }
+        if (soa>sob){
+            alert("Kết quả so sánh a và b là : "+soa+""+">"+""+sob);
+        }
+        if (soa<sob){
+            alert("Kết quả so sánh a và b là : "+soa+""+"<"+""+sob);
+        }
+        if (soa!==sob){
+            alert("2 số a và b : "+soa+" != "+sob)
+        }
+    }
+</script>
+</body>
+</html>
